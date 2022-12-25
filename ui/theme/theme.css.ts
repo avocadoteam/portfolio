@@ -1,15 +1,10 @@
 import { createGlobalTheme, createTheme, createThemeContract, globalStyle } from '@vanilla-extract/css';
-import { intr, mnrp } from './fonts';
 
 const root = createGlobalTheme('body', {
   space: {
     small: '.25rem',
     medium: '.5rem',
     normal: '1rem',
-  },
-  fonts: {
-    familyMan: `${mnrp.style.fontFamily}`,
-    familyInter: `${intr.style.fontFamily}`,
   },
   palette: {
     white: '#ffffff',
@@ -69,9 +64,6 @@ export const darkTheme = createTheme(colorsContract, {
 
 export const vars = { ...root, colors: colorsContract };
 
-globalStyle('body', {
-  boxSizing: 'border-box',
-  fontSize: '16px',
-  fontStyle: 'normal',
+globalStyle('main', {
   backgroundColor: vars.colors.bg,
 });
