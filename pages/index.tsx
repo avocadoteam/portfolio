@@ -1,7 +1,8 @@
+import { HomeLayout } from '@/ui/home/HomeLayout';
 import { NextPage } from 'next';
 
 const HomePage: NextPage = () => {
-  return <div>kekw</div>;
+  return <HomeLayout />;
 };
 
 export default HomePage;
