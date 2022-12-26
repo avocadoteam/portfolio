@@ -1,4 +1,4 @@
-import { createGlobalTheme, createTheme, createThemeContract, globalStyle } from '@vanilla-extract/css';
+import { createGlobalTheme, createTheme, createThemeContract, globalStyle, style } from '@vanilla-extract/css';
 
 const root = createGlobalTheme('body', {
   space: {
@@ -66,4 +66,8 @@ export const vars = { ...root, colors: colorsContract };
 
 globalStyle('main', {
   backgroundColor: vars.colors.bg,
+});
+
+export const textBlue = style({
+  color: vars.palette.bluePlus,
 });
