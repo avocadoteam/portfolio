@@ -68,7 +68,7 @@ export const HomeLayout = () => {
         </div>
         <div className={homeStyle.appGrid}>
           {apps.map(app => (
-            <HoverWrap borderRadius={25} height={72} width={72} shadow={6} key={app}>
+            <HoverWrap borderRadius={25} height={72} width={72} shadow={6} key={app} scale={10}>
               <Image src={`/${app}.png`} width={72} height={72} alt="App logo" />
             </HoverWrap>
           ))}

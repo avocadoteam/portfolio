@@ -38,34 +38,37 @@ export const HoverWrap = ({ height, width, rotation = 5, scale = 1, borderRadius
     setState(initialState);
   }, []);
 
-  const handleParallaxMove: MouseEventHandler<HTMLDivElement> = useCallback(({ pageX, pageY }) => {
-    const { scrollY: scrollTop, scrollX: scrollLeft } = window;
+  const handleParallaxMove: MouseEventHandler<HTMLDivElement> = useCallback(
+    ({ pageX, pageY }) => {
+      const { scrollY: scrollTop, scrollX: scrollLeft } = window;
 
-    const bounds = wRef.current!.getBoundingClientRect();
-    const centerX = width / 2;
-    const centerY = height / 2;
+      const bounds = wRef.current!.getBoundingClientRect();
+      const centerX = width / 2;
+      const centerY = height / 2;
 
-    const widthMultiplier = 360 / width;
-    const offsetX = (pageX - bounds.left - scrollLeft) / width;
-    const offsetY = (pageY - bounds.top - scrollTop) / height;
-    const deltaX = pageX - bounds.left - scrollLeft - centerX;
-    const deltaY = pageY - bounds.top - scrollTop - centerY;
+      const widthMultiplier = 360 / width;
+      const offsetX = (pageX - bounds.left - scrollLeft) / width;
+      const offsetY = (pageY - bounds.top - scrollTop) / height;
+      const deltaX = pageX - bounds.left - scrollLeft - centerX;
+      const deltaY = pageY - bounds.top - scrollTop - centerY;
 
-    const rotateX = (deltaY - offsetY) * ((rotation / 100) * widthMultiplier);
-    const rotateY = (offsetX - deltaX) * ((rotation / 100) * widthMultiplier);
+      const rotateX = (deltaY - offsetY) * ((rotation / 100) * widthMultiplier);
+      const rotateY = (offsetX - deltaX) * ((rotation / 100) * widthMultiplier);
 
-    const angleRad = Math.atan2(deltaY, deltaX);
-    const angleRaw = (angleRad * 180) / Math.PI - 90;
-    const angle = angleRaw < 0 ? angleRaw + 360 : angleRaw;
+      const angleRad = Math.atan2(deltaY, deltaX);
+      const angleRaw = (angleRad * 180) / Math.PI - 90;
+      const angle = angleRaw < 0 ? angleRaw + 360 : angleRaw;
 
-    setState(v => ({
-      ...v,
-      angle,
-      rotateX,
-      rotateY,
-      scale,
-    }));
-  }, []);
+      setState(v => ({
+        ...v,
+        angle,
+        rotateX,
+        rotateY,
+        scale,
+      }));
+    },
+    [scale, width, height],
+  );
 
   const buildTransitionTimingString = useCallback((depth = 0) => {
     const START_SPEED = 160;
