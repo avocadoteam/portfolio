@@ -42,10 +42,19 @@ const linkLine = style({
   },
 });
 
+const appGrid = style({
+  display: 'grid',
+  gridTemplateColumns: 'repeat(3, 72px)',
+  gridTemplateRows: 'repeat(5, 72px)',
+  columnGap: '28px',
+  rowGap: '28px',
+});
+
 export const homeStyle = {
   content,
   img,
   card,
   linkLine,
   cardContent,
+  appGrid,
 };

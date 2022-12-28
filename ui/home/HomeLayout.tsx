@@ -1,6 +1,7 @@
 import { clsx } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
+import { HoverWrap } from '../components/hover-wrap/HoverWrap';
 import { CheckIcon } from '../svgs/CheckIcon';
 import { ChevronRight } from '../svgs/ChevronRight';
 import { MailIcon } from '../svgs/MailIcon';
@@ -10,6 +11,21 @@ import { mnrp } from '../theme/fonts';
 import { linkInsertion, textBlue } from '../theme/theme.css';
 import { tp } from '../theme/typography.css';
 import { homeStyle } from './styles.css';
+
+const apps = [
+  'plus_plus',
+  'hotornot',
+  'capt',
+  'dict',
+  'deliv',
+  'friendship',
+  'stuff',
+  'city',
+  'med_card',
+  'hinter',
+  'purify',
+  'clicker',
+];
 
 export const HomeLayout = () => {
   return (
@@ -50,8 +66,12 @@ export const HomeLayout = () => {
             </button>
           </Link>
         </div>
-        <div>
-          <Image src="/plus_plus.png" width={72} height={72} alt="Plus plus logo" />
+        <div className={homeStyle.appGrid}>
+          {apps.map(app => (
+            <HoverWrap borderRadius={25} height={72} width={72} shadow={6} key={app}>
+              <Image src={`/${app}.png`} width={72} height={72} alt="App logo" />
+            </HoverWrap>
+          ))}
         </div>
       </div>
     </div>

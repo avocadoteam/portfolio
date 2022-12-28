@@ -7,5 +7,14 @@ import { darkTheme, lightTheme } from '../theme/theme.css';
 export const BaseLayout = ({ children }: PropsWithChildren) => {
   const isDark = useThemeDetector();
 
-  return <main className={clsx(isDark ? darkTheme : lightTheme, intr.className)}>{children}</main>;
+  return (
+    <main
+      style={{
+        userSelect: 'none',
+      }}
+      className={clsx(isDark ? darkTheme : lightTheme, intr.className)}
+    >
+      {children}
+    </main>
+  );
 };
