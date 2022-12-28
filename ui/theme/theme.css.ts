@@ -71,3 +71,9 @@ globalStyle('main', {
 export const textBlue = style({
   color: vars.palette.bluePlus,
 });
+
+export const linkInsertion = style({
+  fontSize: 'inherit',
+  lineHeight: 'inherit',
+  textDecoration: 'inherit',
+});

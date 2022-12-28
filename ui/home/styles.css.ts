@@ -24,8 +24,28 @@ const card = style({
   '--squircle-radius': '40px',
   '--squircle-smooth': '1',
 } as any);
+
+const cardContent = style({
+  display: 'grid',
+  gridTemplateColumns: 'repeat(2, 1fr)',
+  columnGap: '56px',
+});
+
+const linkLine = style({
+  display: 'flex',
+  alignItems: 'center',
+  marginTop: '18px',
+  color: vars.colors.text.dark,
+  ':hover': {
+    textDecoration: 'underline',
+    cursor: 'pointer',
+  },
+});
+
 export const homeStyle = {
   content,
   img,
   card,
+  linkLine,
+  cardContent,
 };

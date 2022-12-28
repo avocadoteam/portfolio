@@ -27,5 +27,16 @@ export const tp = recipe({
         color: vars.colors.text.dark,
       },
     },
+    m: {
+      'x.5': {
+        margin: '0 .5rem',
+      },
+      t1: {
+        marginTop: '1rem',
+      },
+      t2: {
+        marginTop: '2rem',
+      },
+    },
   },
 });
