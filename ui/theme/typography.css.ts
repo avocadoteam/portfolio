@@ -13,10 +13,15 @@ export const tp = recipe({
         lineHeight: '123.6%',
         color: vars.colors.text.head,
       },
+      head2: {
+        fontSize: '20px',
+        lineHeight: '27px',
+        color: vars.colors.text.head,
+      },
       shadow: {
         fontWeight: '400 !important',
-        lineHeight: '136.02%',
-        fontSize: '17px',
+        lineHeight: '19px',
+        fontSize: '16px',
         color: vars.colors.text.shadow,
       },
       dark: {

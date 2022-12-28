@@ -1,4 +1,6 @@
+import { hex2rgba } from '@/lib/utils';
 import { style } from '@vanilla-extract/css';
+import { recipe } from '@vanilla-extract/recipes';
 import { vars } from '../theme/theme.css';
 
 const content = style({
@@ -15,15 +17,26 @@ const img = style({
   marginBottom: '56px',
 });
 
-const card = style({
-  backgroundColor: vars.colors.bgCard,
-  padding: '48px 44px',
-  position: 'relative',
-  maskImage: 'paint(squircle)',
-  '--squircle-fill': vars.colors.bgCard,
-  '--squircle-radius': '40px',
-  '--squircle-smooth': '1',
-} as any);
+const card = recipe({
+  base: {
+    backgroundColor: vars.colors.bgCard,
+    position: 'relative',
+    maskImage: 'paint(squircle)',
+    '--squircle-fill': vars.colors.bgCard,
+    '--squircle-radius': '40px',
+    '--squircle-smooth': '1',
+  } as any,
+  variants: {
+    padding: {
+      big: {
+        padding: '48px 44px',
+      },
+      small: {
+        padding: '24px',
+      },
+    },
+  },
+});
 
 const cardContent = style({
   display: 'grid',
@@ -51,6 +64,20 @@ const appGrid = style({
   marginTop: '12px',
 });
 
+const plusLabel = style({
+  padding: '4px 6px',
+  borderRadius: '12px',
+  background: hex2rgba('#459BFF', 0.1),
+  color: vars.palette.bluePlus,
+  fontWeight: 800,
+  fontSize: '12px',
+  lineHeight: '15px',
+  letterSpacing: '0.02em',
+  textTransform: 'uppercase',
+  width: '30px',
+  textAlign: 'center',
+});
+
 export const homeStyle = {
   content,
   img,
@@ -58,4 +85,5 @@ export const homeStyle = {
   linkLine,
   cardContent,
   appGrid,
+  plusLabel,
 };

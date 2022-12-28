@@ -29,7 +29,7 @@ const apps = [
 
 export const WelcomeCard = () => {
   return (
-    <div className={clsx(homeStyle.card, homeStyle.cardContent)}>
+    <div className={clsx(homeStyle.card({ padding: 'big' }), homeStyle.cardContent)}>
       <div>
         <p className={clsx(tp({ variant: 'head' }), mnrp.className)}>
           Создаём <span className={textBlue}>уникальные</span> мини-приложения и не только
