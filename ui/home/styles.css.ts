@@ -48,6 +48,7 @@ const appGrid = style({
   gridTemplateRows: 'repeat(5, 72px)',
   columnGap: '28px',
   rowGap: '28px',
+  marginTop: '12px',
 });
 
 export const homeStyle = {
