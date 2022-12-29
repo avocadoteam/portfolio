@@ -1,5 +1,5 @@
 import { hex2rgba } from '@/lib/utils';
-import { style } from '@vanilla-extract/css';
+import { ComplexStyleRule, style } from '@vanilla-extract/css';
 import { recipe } from '@vanilla-extract/recipes';
 import { vars } from '../theme/theme.css';
 
@@ -11,6 +11,13 @@ const content = style({
   justifyContent: 'center',
   margin: '0 auto',
   padding: '86px 0 96px',
+});
+
+const contentGrid = style({
+  display: 'grid',
+  gridTemplateColumns: 'repeat(2, 1fr)',
+  columnGap: '20px',
+  marginTop: '1rem',
 });
 
 const img = style({
@@ -64,11 +71,9 @@ const appGrid = style({
   marginTop: '12px',
 });
 
-const plusLabel = style({
+const baseLabel: ComplexStyleRule = {
   padding: '4px 6px',
   borderRadius: '12px',
-  background: hex2rgba('#459BFF', 0.1),
-  color: vars.palette.bluePlus,
   fontWeight: 800,
   fontSize: '12px',
   lineHeight: '15px',
@@ -76,14 +81,33 @@ const plusLabel = style({
   textTransform: 'uppercase',
   width: '30px',
   textAlign: 'center',
+};
+
+const plusLabel = style({
+  ...baseLabel,
+  background: hex2rgba('#459BFF', 0.1),
+  color: vars.palette.bluePlus,
+});
+const hotLabel = style({
+  ...baseLabel,
+  background: hex2rgba('#FF8400', 0.1),
+  color: vars.palette.yellowHot,
+});
+
+const line = style({
+  display: 'flex',
+  alignItems: 'center',
 });
 
 export const homeStyle = {
   content,
+  contentGrid,
   img,
   card,
   linkLine,
   cardContent,
   appGrid,
   plusLabel,
+  line,
+  hotLabel,
 };

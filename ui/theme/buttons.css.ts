@@ -1,3 +1,4 @@
+import { hex2rgba } from '@/lib/utils';
 import { style } from '@vanilla-extract/css';
 import { recipe } from '@vanilla-extract/recipes';
 import { vars } from './theme.css';
@@ -31,6 +32,18 @@ export const btn = recipe({
         backgroundColor: vars.colors.btnSecondary,
         color: vars.colors.text.btnSecondary,
       },
+      plusplus: {
+        background: hex2rgba('#459BFF', 0.1),
+        color: vars.palette.bluePlus,
+        lineHeight: '18px',
+        fontSize: '15px',
+      },
+      hotornot: {
+        background: hex2rgba('#FF8400', 0.1),
+        color: vars.palette.yellowHot,
+        lineHeight: '18px',
+        fontSize: '15px',
+      },
     },
     m: {
       t12: {
@@ -39,12 +52,18 @@ export const btn = recipe({
       t34: {
         marginTop: '34px',
       },
+      t32: {
+        marginTop: '32px',
+      },
     },
   },
 });
 
 export const mr12 = style({
   marginRight: '12px',
+});
+export const mr20 = style({
+  marginRight: '20px',
 });
 export const mr9 = style({
   marginRight: '9px',

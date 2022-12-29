@@ -1,6 +1,7 @@
 import { BaseLayout } from '@/ui/components/BaseLayout';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
+import 'swiper/css/bundle';
 import '../styles/global.css';
 
 function MyApp({ Component, pageProps }: AppProps) {

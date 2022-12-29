@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { HotCard } from './HotCard';
 import { PlusPlusCard } from './PlusPlusCard';
 import { homeStyle } from './styles.css';
 import { WelcomeCard } from './WelcomeCard';
@@ -11,7 +12,10 @@ export const HomeLayout = () => {
       </div>
 
       <WelcomeCard />
-      <PlusPlusCard />
+      <div className={homeStyle.contentGrid}>
+        <PlusPlusCard />
+        <HotCard />
+      </div>
     </div>
   );
 };

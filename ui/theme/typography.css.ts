@@ -42,6 +42,9 @@ export const tp = recipe({
       t2: {
         marginTop: '2rem',
       },
+      'r.25': {
+        marginRight: '.25rem',
+      },
     },
   },
 });
