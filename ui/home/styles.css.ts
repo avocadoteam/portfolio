@@ -1,5 +1,5 @@
 import { hex2rgba } from '@/lib/utils';
-import { ComplexStyleRule, style } from '@vanilla-extract/css';
+import { ComplexStyleRule, keyframes, style } from '@vanilla-extract/css';
 import { recipe } from '@vanilla-extract/recipes';
 import { vars } from '../theme/theme.css';
 
@@ -19,7 +19,6 @@ const contentGrid = style({
   columnGap: '20px',
   marginTop: '1rem',
 });
-
 const img = style({
   marginBottom: '56px',
 });
@@ -103,6 +102,9 @@ const line = style({
   display: 'flex',
   alignItems: 'center',
 });
+const lineStart = style({
+  display: 'flex',
+});
 
 const numWrap = style({
   backgroundColor: vars.colors.btnSecondary,
@@ -133,6 +135,27 @@ const counterWrap = style({
   alignItems: 'center',
   margin: '1rem 0',
 });
+const copyWrap = style({
+  display: 'flex',
+  justifyContent: 'center',
+  flexDirection: 'column',
+  alignItems: 'center',
+  margin: '1rem 0',
+  color: vars.colors.text.copy,
+});
+
+const ckw = keyframes({
+  '0%': {
+    transform: 'rotate(0deg)',
+  },
+  '100%': {
+    transform: 'rotate(360deg)',
+  },
+});
+
+const rotation = style({
+  animation: `${ckw} 3s infinite linear`,
+});
 
 export const homeStyle = {
   content,
@@ -149,4 +172,7 @@ export const homeStyle = {
   numWrap,
   numbs,
   counterWrap,
+  lineStart,
+  copyWrap,
+  rotation,
 };

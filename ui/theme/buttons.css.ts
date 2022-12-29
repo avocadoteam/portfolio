@@ -55,6 +55,9 @@ export const btn = recipe({
       t12: {
         marginTop: '12px',
       },
+      t20: {
+        marginTop: '20px',
+      },
       t34: {
         marginTop: '34px',
       },

@@ -24,11 +24,16 @@ export const tp = recipe({
         fontSize: '16px',
         color: vars.colors.text.shadow,
       },
+      copy: {
+        fontWeight: '600 !important',
+        lineHeight: '16px',
+        fontSize: '13px',
+        color: vars.colors.text.copy,
+      },
       dark: {
         fontWeight: '700 !important',
         lineHeight: '19px',
         fontSize: '16px',
-
         color: vars.colors.text.dark,
       },
     },
