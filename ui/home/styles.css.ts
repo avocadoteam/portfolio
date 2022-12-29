@@ -93,10 +93,45 @@ const hotLabel = style({
   background: hex2rgba('#FF8400', 0.1),
   color: vars.palette.yellowHot,
 });
+const captLabel = style({
+  ...baseLabel,
+  background: hex2rgba('#EB3040', 0.1),
+  color: vars.palette.redCapt,
+});
 
 const line = style({
   display: 'flex',
   alignItems: 'center',
+});
+
+const numWrap = style({
+  backgroundColor: vars.colors.btnSecondary,
+  color: vars.colors.text.head,
+  padding: '12px',
+  width: '13px',
+  height: '33px',
+  borderRadius: '16px',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  fontWeight: 600,
+  fontSize: '27px',
+  lineHeight: '33px',
+});
+
+const numbs = style({
+  display: 'grid',
+  gridTemplateColumns: 'repeat(7, 1fr)',
+  columnGap: '8px',
+  margin: '1rem 0',
+});
+
+const counterWrap = style({
+  display: 'flex',
+  justifyContent: 'center',
+  flexDirection: 'column',
+  alignItems: 'center',
+  margin: '1rem 0',
 });
 
 export const homeStyle = {
@@ -110,4 +145,8 @@ export const homeStyle = {
   plusLabel,
   line,
   hotLabel,
+  captLabel,
+  numWrap,
+  numbs,
+  counterWrap,
 };

@@ -44,6 +44,12 @@ export const btn = recipe({
         lineHeight: '18px',
         fontSize: '15px',
       },
+      capt: {
+        background: hex2rgba('#EB3040', 0.1),
+        color: vars.palette.redCapt,
+        lineHeight: '18px',
+        fontSize: '15px',
+      },
     },
     m: {
       t12: {

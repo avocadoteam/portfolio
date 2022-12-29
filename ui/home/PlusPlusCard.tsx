@@ -1,7 +1,7 @@
 import { clsx } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FreeMode, Mousewheel, Navigation } from 'swiper';
+import { FreeMode, Navigation } from 'swiper';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -36,11 +36,10 @@ export const PlusPlusCard = () => {
       </Link>
       <Swiper
         freeMode
-        mousewheel
         navigation
         slidesPerView="auto"
         spaceBetween={10}
-        modules={[FreeMode, Mousewheel, Navigation]}
+        modules={[FreeMode, Navigation]}
         className={swStls.swiperContainer}
       >
         {screens.map(l => (

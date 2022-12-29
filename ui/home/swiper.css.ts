@@ -24,7 +24,7 @@ globalStyle('.swiper-button-next', {
   },
 });
 globalStyle('.swiper-button-prev', {
-  backgroundImage: 'url(/imgs/arrow-left-s-line.svg)',
+  backgroundImage: 'url(/chevron_left.svg)',
   left: '20px',
   ...baseArrow,
   '@media': {
