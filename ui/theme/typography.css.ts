@@ -12,6 +12,11 @@ export const tp = recipe({
         fontSize: '30px',
         lineHeight: '123.6%',
         color: vars.colors.text.head,
+        '@media': {
+          'screen and (max-width: 825px)': {
+            fontSize: '28px',
+          },
+        },
       },
       head2: {
         fontSize: '20px',

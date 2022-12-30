@@ -1,3 +1,4 @@
+import { useMQuery } from '@/lib/useMQuery';
 import { clsx } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -28,6 +29,9 @@ const apps = [
 ];
 
 export const WelcomeCard = () => {
+  const lessThan350px = useMQuery('screen and (max-width: 359px)');
+  const size = lessThan350px ? 56 : 72;
+
   return (
     <div className={clsx(homeStyle.card({ padding: 'big' }), homeStyle.cardContent)}>
       <div>
@@ -63,8 +67,8 @@ export const WelcomeCard = () => {
       </div>
       <div className={homeStyle.appGrid}>
         {apps.map(app => (
-          <HoverWrap borderRadius={25} height={72} width={72} shadow={6} key={app} scale={10}>
-            <Image src={`/${app}.png`} width={72} height={72} alt="App logo" />
+          <HoverWrap borderRadius={25} height={size} width={size} shadow={6} key={app} scale={10}>
+            <Image src={`/${app}.png`} fill alt="App logo" />
           </HoverWrap>
         ))}
       </div>

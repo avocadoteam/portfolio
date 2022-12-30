@@ -11,6 +11,12 @@ const content = style({
   justifyContent: 'center',
   margin: '0 auto',
   padding: '86px 0 96px',
+  '@media': {
+    'screen and (max-width: 825px)': {
+      padding: '2rem 1rem',
+      width: 'calc(100% - 2rem)',
+    },
+  },
 });
 
 const contentGrid = style({
@@ -18,9 +24,22 @@ const contentGrid = style({
   gridTemplateColumns: 'repeat(2, 1fr)',
   columnGap: '20px',
   marginTop: '1rem',
+  '@media': {
+    'screen and (max-width: 825px)': {
+      gridTemplateColumns: '1fr',
+      rowGap: '12px',
+      marginTop: '12px',
+    },
+  },
 });
 const img = style({
   marginBottom: '56px',
+  '@media': {
+    'screen and (max-width: 825px)': {
+      marginBottom: '37px',
+      marginLeft: '13px',
+    },
+  },
 });
 
 const card = recipe({
@@ -36,6 +55,11 @@ const card = recipe({
     padding: {
       big: {
         padding: '48px 44px',
+        '@media': {
+          'screen and (max-width: 825px)': {
+            padding: '24px',
+          },
+        },
       },
       small: {
         padding: '24px',
@@ -48,6 +72,12 @@ const cardContent = style({
   display: 'grid',
   gridTemplateColumns: 'repeat(2, 1fr)',
   columnGap: '56px',
+  '@media': {
+    'screen and (max-width: 825px)': {
+      gridTemplateColumns: '1fr',
+      rowGap: '28px',
+    },
+  },
 });
 
 const linkLine = style({
@@ -68,6 +98,16 @@ const appGrid = style({
   columnGap: '28px',
   rowGap: '28px',
   marginTop: '12px',
+  '@media': {
+    'screen and (max-width: 825px)': {
+      gridRowStart: 1,
+      gridTemplateRows: 'auto',
+      marginTop: '0',
+    },
+    'screen and (max-width: 359px)': {
+      gridTemplateColumns: 'repeat(3, 56px)',
+    },
+  },
 });
 
 const baseLabel: ComplexStyleRule = {
@@ -119,6 +159,14 @@ const numWrap = style({
   fontWeight: 600,
   fontSize: '27px',
   lineHeight: '33px',
+  '@media': {
+    'screen and (max-width: 400px)': {
+      lineHeight: '18px',
+      fontSize: '15px',
+      height: '23px',
+      padding: '8px',
+    },
+  },
 });
 
 const numbs = style({
@@ -126,6 +174,11 @@ const numbs = style({
   gridTemplateColumns: 'repeat(7, 1fr)',
   columnGap: '8px',
   margin: '1rem 0',
+  '@media': {
+    'screen and (max-width: 400px)': {
+      columnGap: '4px',
+    },
+  },
 });
 
 const counterWrap = style({
@@ -134,6 +187,7 @@ const counterWrap = style({
   flexDirection: 'column',
   alignItems: 'center',
   margin: '1rem 0',
+  textAlign: 'center',
 });
 const copyWrap = style({
   display: 'flex',
@@ -156,6 +210,13 @@ const ckw = keyframes({
 const rotation = style({
   animation: `${ckw} 3s infinite linear`,
 });
+const hideImg = style({
+  '@media': {
+    'screen and (max-width: 400px)': {
+      display: 'none',
+    },
+  },
+});
 
 export const homeStyle = {
   content,
@@ -175,4 +236,5 @@ export const homeStyle = {
   lineStart,
   copyWrap,
   rotation,
+  hideImg,
 };

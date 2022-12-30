@@ -143,7 +143,7 @@ export const HoverWrap = ({ height, width, rotation = 5, scale = 1, borderRadius
         </div>
       );
     });
-  }, []);
+  }, [width, height, borderRadius]);
 
   const lightingStyles = {
     ...buildTransitionTimingString(2),

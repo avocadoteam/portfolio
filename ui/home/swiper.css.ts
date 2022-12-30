@@ -16,10 +16,7 @@ globalStyle('.swiper-button-next', {
   ...baseArrow,
   '@media': {
     'screen and (max-width: 768px)': {
-      width: '24px',
-      height: '24px',
-      top: '55%',
-      right: '0',
+      display: 'none',
     },
   },
 });
@@ -29,10 +26,7 @@ globalStyle('.swiper-button-prev', {
   ...baseArrow,
   '@media': {
     'screen and (max-width: 768px)': {
-      width: '24px',
-      height: '24px',
-      top: '55%',
-      left: '0',
+      display: 'none',
     },
   },
 });
@@ -53,6 +47,13 @@ const swiperSlider = style({
 const swiperContainer = style({
   width: '342px',
   marginTop: '39px',
+  '@media': {
+    'screen and (max-width: 825px)': {
+      width: '235px',
+      marginLeft: 0,
+      marginTop: '24px',
+    },
+  },
 });
 
 export const swStls = {

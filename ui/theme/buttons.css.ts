@@ -21,6 +21,15 @@ export const btn = recipe({
     ':hover': {
       transform: 'scale(1.1)',
     },
+
+    '@media': {
+      'screen and (max-width: 360px)': {
+        lineHeight: '16px',
+        fontSize: '14px',
+        padding: '12px 16px',
+        borderRadius: '26px',
+      },
+    },
   },
   variants: {
     variant: {
