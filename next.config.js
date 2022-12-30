@@ -7,7 +7,8 @@ const withVanillaExtract = createVanillaExtractPlugin();
 const nextConfig = {
   reactStrictMode: true,
   experimental: {
-    optimizeCss: true
+    optimizeCss: true,
+    esmExternals: true
   },
 };
 

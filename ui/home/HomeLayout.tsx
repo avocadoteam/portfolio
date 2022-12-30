@@ -1,3 +1,4 @@
+import { useSwitchTheme } from '@/lib/useSwitchTheme';
 import Image from 'next/image';
 import { CaptCard } from './CaptCard';
 import { CopyRight } from './CopyRight';
@@ -9,10 +10,11 @@ import { WelcomeCard } from './WelcomeCard';
 import { WorkCard } from './WorkCard';
 
 export const HomeLayout = () => {
+  const { toggle } = useSwitchTheme();
   return (
     <div className={homeStyle.content}>
       <div className={homeStyle.img}>
-        <Image src="/logo.svg" width={30} height={34} alt="Avocado team logo" />
+        <Image src="/logo.svg" width={30} height={34} alt="Avocado team logo" onClick={toggle} />
       </div>
 
       <WelcomeCard />
