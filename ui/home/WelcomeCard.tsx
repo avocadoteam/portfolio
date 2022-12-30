@@ -67,8 +67,8 @@ export const WelcomeCard = () => {
       </div>
       <div className={homeStyle.appGrid}>
         {apps.map(app => (
-          <HoverWrap borderRadius={25} height={size} width={size} shadow={6} key={app} scale={10}>
-            <Image src={`/${app}.png`} fill alt="App logo" />
+          <HoverWrap borderRadius={25} height={size} width={size} key={app} scale={10}>
+            <Image src={`/${app}.svg`} fill alt="App logo" quality={100} />
           </HoverWrap>
         ))}
       </div>

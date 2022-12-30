@@ -12,7 +12,7 @@ export const WorkCard = () => {
   return (
     <div className={homeStyle.card({ padding: 'small' })} style={{ height: 'max-content' }}>
       <div className={homeStyle.lineStart}>
-        <Image src="/cloud.png" width={60} height={60} alt="Cloud" className={clsx(mr20, homeStyle.hideImg)} />
+        <Image src="/cloud.png" width={60} height={60} alt="Cloud" className={clsx(mr20, homeStyle.hideImg)} quality={100} />
         <div>
           <p className={clsx(tp({ variant: 'head2' }), mnrp.className)}>Хотите поработать с нами?</p>
 

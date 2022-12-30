@@ -10,9 +10,9 @@ import { homeStyle } from './styles.css';
 
 export const CaptCard = () => {
   return (
-    <div className={homeStyle.card({ padding: 'small' })} style={{ height: 'max-content' }}>
+    <div className={homeStyle.card({ padding: 'small' })}>
       <div className={homeStyle.line}>
-        <Image src="/capt.png" width={56} height={56} alt="Capt logo" className={mr20} />
+        <Image src="/capt.svg" width={56} height={56} alt="Capt logo" className={mr20} quality={100} />
         <div>
           <div className={homeStyle.line}>
             <p className={clsx(tp({ variant: 'head2', m: 'r.25' }), mnrp.className)}>Капт</p>

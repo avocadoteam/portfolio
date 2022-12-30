@@ -14,7 +14,7 @@ export const HomeLayout = () => {
   return (
     <div className={homeStyle.content}>
       <div className={homeStyle.img}>
-        <Image src="/logo.svg" width={30} height={34} alt="Avocado team logo" onClick={toggle} />
+        <Image src="/logo.svg" width={30} height={34} alt="Avocado team logo" onClick={toggle} quality={100} />
       </div>
 
       <WelcomeCard />

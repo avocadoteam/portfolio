@@ -7,11 +7,9 @@ class MyDocument extends Document {
       <Html lang="ru">
         <Head>
           <Script id="squircle" strategy="beforeInteractive">{`
-if ("paintWorklet" in CSS) {
   CSS.paintWorklet.addModule(
     "https://www.unpkg.com/css-houdini-squircle@0.2.0/squircle.min.js"
   );
-}
 `}</Script>
         </Head>
         <body>

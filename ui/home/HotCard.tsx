@@ -19,13 +19,13 @@ export const HotCard = () => {
   return (
     <div className={homeStyle.card({ padding: 'small' })}>
       <div className={homeStyle.line}>
-        <Image src="/hotornot.png" width={56} height={56} alt="Hot or not logo" className={mr20} />
+        <Image src="/hotornot.svg" width={56} height={56} alt="Hot or not logo" className={mr20} quality={100} />
         <div>
           <div className={homeStyle.line}>
             <p className={clsx(tp({ variant: 'head2', m: 'r.25' }), mnrp.className)}>Hot or Not</p>
             <div className={homeStyle.hotLabel}>new</div>
           </div>
-          <p className={tp({ variant: 'shadow' })}>узнайте рейтинг вашего профиля ВКонтакте и оценивайте чужие</p>
+          <p className={tp({ variant: 'shadow' })}>Узнайте рейтинг вашего профиля ВКонтакте и оценивайте чужие</p>
         </div>
       </div>
       <Link href="https://vk.com/hotprofile" target="_blank" className={linkInsertion}>
@@ -44,7 +44,7 @@ export const HotCard = () => {
       >
         {screens.map(l => (
           <SwiperSlide key={l} className={swStls.swiperSlider}>
-            <Image src={l} width={235} height={413} alt={l.split('/').pop()?.replace('.png', '') ?? ''} />
+            <Image src={l} quality={100} width={235} height={413} alt={l.split('/').pop()?.replace('.png', '') ?? ''} />
           </SwiperSlide>
         ))}
       </Swiper>

@@ -19,7 +19,7 @@ export const btn = recipe({
     fontFamily: 'inherit',
     fontStyle: 'inherit',
     ':hover': {
-      transform: 'scale(1.1)',
+      transform: 'scale(0.96)',
     },
 
     '@media': {
