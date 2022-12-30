@@ -16,15 +16,12 @@ type Props = PropsWithChildren<{
   rotation?: number;
   scale?: number;
   borderRadius?: number;
-  shadow?: number;
 }>;
 
-export const HoverWrap = ({ height, width, rotation = 5, scale = 1, borderRadius = 0, shadow = 5, children }: Props) => {
+export const HoverWrap = ({ height, width, rotation = 5, scale = 1, borderRadius = 0, children }: Props) => {
   const [move, setState] = useState(initialState);
   const wRef = useRef<HTMLDivElement>(null);
 
-  const shadowPositionModifier = move.rotateX + (shadow * shadow) / 2;
-  const shadowBlurModifier = 20 + shadow * shadow;
   const opacityModifier = move.isHovered ? 1 : 0;
   const lightingShineModifier = move.shine * 0.1;
 
@@ -115,9 +112,7 @@ export const HoverWrap = ({ height, width, rotation = 5, scale = 1, borderRadius
     ...buildTransitionTimingString(2),
     borderRadius: `${borderRadius}px`,
     opacity: opacityModifier,
-    boxShadow: `
-      0px ${shadowPositionModifier}px ${shadowBlurModifier}px rgba(0, 0, 0, 0.5),
-      0px ${shadowPositionModifier * 0.33}px ${shadowBlurModifier * 0.33}px 5px rgba(0, 0, 0, 0.5)`,
+    boxShadow: `0px 16px 50px rgba(0, 0, 0, 0.15)`,
   };
 
   const renderLayers = useCallback(() => {

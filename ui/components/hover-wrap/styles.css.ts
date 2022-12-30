@@ -3,6 +3,7 @@ import { style } from '@vanilla-extract/css';
 const wrapper = style({
   transformStyle: 'preserve-3d',
   transform: 'perspective(1000px)',
+  cursor: 'pointer',
 });
 const container = style({
   position: 'relative',
