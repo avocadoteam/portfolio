@@ -19,7 +19,15 @@ export const HotCard = () => {
   return (
     <div className={homeStyle.card({ padding: 'small' })}>
       <div className={homeStyle.line}>
-        <Image src="/hotornot.svg" width={56} height={56} alt="Hot or not logo" className={mr20} quality={100} />
+        <Image
+          src="/hotornot.svg"
+          width={56}
+          height={56}
+          alt="Hot or not logo"
+          className={mr20}
+          quality={100}
+          style={{ borderRadius: '18px' }}
+        />
         <div>
           <div className={homeStyle.line}>
             <p className={clsx(tp({ variant: 'head2', m: 'r.25' }), mnrp.className)}>Hot or Not</p>
