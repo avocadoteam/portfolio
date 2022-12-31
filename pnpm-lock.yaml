@@ -11,6 +11,7 @@ specifiers:
   '@vanilla-extract/recipes': 0.3.0
   concurrently: 7.6.0
   critters: 0.0.16
+  css-paint-polyfill: 3.4.0
   eslint: 8.30.0
   eslint-config-next: 13.0.6
   nanostores: 0.7.1
@@ -27,6 +28,7 @@ dependencies:
   '@vanilla-extract/css': 1.9.2
   '@vanilla-extract/recipes': 0.3.0_@vanilla-extract+css@1.9.2
   critters: 0.0.16
+  css-paint-polyfill: 3.4.0
   nanostores: 0.7.1
   next: 13.1.1_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
@@ -957,6 +959,10 @@ packages:
       shebang-command: 2.0.0
       which: 2.0.2
     dev: true
+
+  /css-paint-polyfill/3.4.0:
+    resolution: {integrity: sha512-B89ymLgMZie41d+QrD//5RWnwykvru5H9Yzd/MMJIgPdVsKB7t4lxuhIAyzy5FnoUbb0MztagNVRe9dI7kMbiA==}
+    dev: false
 
   /css-select/4.3.0:
     resolution: {integrity: sha512-wPpOYtnsVontu2mODhA19JrqWxNsfdatRKd64kmpRbQgh1KtItko5sTnEpPdpSaJszTOhEMlF/RPz28qj4HqhQ==}

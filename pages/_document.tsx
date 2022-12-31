@@ -7,10 +7,16 @@ class MyDocument extends Document {
       <Html lang="ru">
         <Head>
           <Script id="squircle" strategy="beforeInteractive">{`
-  CSS.paintWorklet.addModule(
-    "https://www.unpkg.com/css-houdini-squircle@0.2.0/squircle.min.js"
-  );
-`}</Script>
+          (async function () {
+            if (!("paintWorklet" in CSS)) {
+              await import("css-paint-polyfill");
+            }
+        
+            CSS.paintWorklet.addModule(
+              'https://www.unpkg.com/css-houdini-squircle@0.2.0/squircle.min.js'
+            );
+          })();
+          `}</Script>
         </Head>
         <body>
           <Main />
