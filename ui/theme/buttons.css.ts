@@ -70,9 +70,6 @@ export const btn = recipe({
       t34: {
         marginTop: '34px',
       },
-      t32: {
-        marginTop: '32px',
-      },
     },
   },
 });

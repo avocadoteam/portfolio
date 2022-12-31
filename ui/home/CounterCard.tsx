@@ -5,7 +5,7 @@ const numbs = [1, 4, 2, 1, 9, 3, 4];
 
 export const CounterCard = () => {
   return (
-    <div className={homeStyle.card({ padding: 'small' })}>
+    <div className={homeStyle.card({ padding: 'small', height: 'max' })}>
       <div className={homeStyle.counterWrap}>
         <p className={tp({ variant: 'shadow' })}>👀 Наши приложения открыли:</p>
 

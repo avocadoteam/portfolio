@@ -32,6 +32,17 @@ const contentGrid = style({
     },
   },
 });
+const contentGridRows = style({
+  display: 'grid',
+  gridTemplateColumns: '1fr',
+  rowGap: '20px',
+  '@media': {
+    'screen and (max-width: 825px)': {
+      rowGap: '12px',
+    },
+  },
+});
+
 const img = style({
   marginBottom: '56px',
   '@media': {
@@ -63,6 +74,11 @@ const card = recipe({
       },
       small: {
         padding: '24px',
+      },
+    },
+    height: {
+      max: {
+        height: 'max-content',
       },
     },
   },
@@ -196,6 +212,7 @@ const copyWrap = style({
   alignItems: 'center',
   margin: '1rem 0',
   color: vars.colors.text.copy,
+  height: 'max-content',
 });
 
 const ckw = keyframes({
@@ -237,4 +254,5 @@ export const homeStyle = {
   copyWrap,
   rotation,
   hideImg,
+  contentGridRows,
 };

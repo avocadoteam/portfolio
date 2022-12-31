@@ -29,7 +29,7 @@ export const PlusPlusCard = () => {
         </div>
       </div>
       <Link href="https://vk.com/plusmath" target="_blank" className={linkInsertion}>
-        <button className={btn({ variant: 'plusplus', m: 't32' })}>
+        <button className={btn({ variant: 'plusplus', m: 't20' })}>
           <AppIcon className={mr9} />
           Открыть
         </button>

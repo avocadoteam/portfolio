@@ -37,7 +37,7 @@ export const HotCard = () => {
         </div>
       </div>
       <Link href="https://vk.com/hotprofile" target="_blank" className={linkInsertion}>
-        <button className={btn({ variant: 'hotornot', m: 't32' })}>
+        <button className={btn({ variant: 'hotornot', m: 't20' })}>
           <AppIcon className={mr9} />
           Открыть
         </button>

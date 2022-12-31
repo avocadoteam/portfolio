@@ -10,7 +10,7 @@ import { homeStyle } from './styles.css';
 
 export const CaptCard = () => {
   return (
-    <div className={homeStyle.card({ padding: 'small' })}>
+    <div className={homeStyle.card({ padding: 'small', height: 'max' })}>
       <div className={homeStyle.line}>
         <Image src="/capt.svg" width={56} height={56} alt="Capt logo" className={mr20} quality={100} />
         <div>
@@ -22,7 +22,7 @@ export const CaptCard = () => {
         </div>
       </div>
       <Link href="https://vk.com/capture" target="_blank" className={linkInsertion}>
-        <button className={btn({ variant: 'capt', m: 't32' })}>
+        <button className={btn({ variant: 'capt', m: 't20' })}>
           <AppIcon className={mr9} />
           Открыть
         </button>

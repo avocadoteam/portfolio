@@ -23,12 +23,14 @@ export const HomeLayout = () => {
         <HotCard />
       </div>
       <div className={homeStyle.contentGrid}>
-        <CaptCard />
-        <CounterCard />
-      </div>
-      <div className={homeStyle.contentGrid}>
-        <WorkCard />
-        <CopyRight />
+        <div className={homeStyle.contentGridRows}>
+          <CaptCard />
+          <WorkCard />
+        </div>
+        <div className={homeStyle.contentGridRows}>
+          <CounterCard />
+          <CopyRight />
+        </div>
       </div>
     </div>
   );
