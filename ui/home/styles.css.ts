@@ -55,9 +55,7 @@ const img = style({
 
 const card = recipe({
   base: {
-    backgroundColor: vars.colors.bgCard,
-    position: 'relative',
-    maskImage: 'paint(squircle)',
+    background: 'paint(squircle)',
     '--squircle-fill': vars.colors.bgCard,
     '--squircle-radius': '40px',
     '--squircle-smooth': '1',

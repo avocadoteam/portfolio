@@ -13,7 +13,7 @@ export const BaseLayout = ({ children }: PropsWithChildren) => {
         await import('css-paint-polyfill');
       }
 
-      (CSS as any).paintWorklet.addModule('https://www.unpkg.com/css-houdini-squircle@0.2.0/squircle.min.js');
+      (CSS as any).paintWorklet.addModule('https://www.unpkg.com/css-houdini-squircle/squircle.min.js');
     })();
   }, []);
 
