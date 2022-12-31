@@ -1,5 +1,5 @@
 import { globalStyle, GlobalStyleRule, style } from '@vanilla-extract/css';
-import { vars } from '../theme/theme.css';
+import { vars } from '../../theme/theme.css';
 
 const baseArrow: GlobalStyleRule = {
   backgroundRepeat: 'no-repeat',
@@ -40,16 +40,21 @@ globalStyle('.swiper-button-next:after, .swiper-button-prev:after', {
 const swiperSlider = style({
   borderRadius: '20px',
   overflow: 'hidden',
-  width: '235px',
+  width: '220px',
   height: '413px',
+  '@media': {
+    'screen and (max-width: 400px)': {
+      width: '220px',
+    },
+  },
 });
 
 const swiperContainer = style({
-  width: '342px',
   marginTop: '39px',
+  height: '413px',
+
   '@media': {
     'screen and (max-width: 825px)': {
-      width: '235px',
       marginLeft: 0,
       marginTop: '24px',
     },
