@@ -45,6 +45,8 @@ const contentGridRows = style({
 
 const img = style({
   marginBottom: '56px',
+  display: 'flex',
+  justifyContent: 'space-between',
   '@media': {
     'screen and (max-width: 825px)': {
       marginBottom: '37px',
