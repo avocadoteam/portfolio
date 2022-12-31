@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-        <title>Avocado team</title>
+        <title>avocado</title>
       </Head>
       <BaseLayout>
         <Component {...pageProps} />
