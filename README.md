@@ -1,0 +1,1 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8b121650-7e26-4b71-b893-ee73714d265b/deploy-status)](https://app.netlify.com/sites/clever-buttercream-6b61cc/deploys)
