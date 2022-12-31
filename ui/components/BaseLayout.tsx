@@ -1,11 +1,21 @@
 import { useSwitchTheme } from '@/lib/useSwitchTheme';
 import { clsx } from '@/lib/utils';
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren, useEffect } from 'react';
 import { intr } from '../theme/fonts';
 import { darkTheme, lightTheme } from '../theme/theme.css';
 
 export const BaseLayout = ({ children }: PropsWithChildren) => {
   const { theme } = useSwitchTheme();
+
+  useEffect(() => {
+    (async function () {
+      if (!('paintWorklet' in CSS)) {
+        await import('css-paint-polyfill');
+      }
+
+      (CSS as any).paintWorklet.addModule('https://www.unpkg.com/css-houdini-squircle@0.2.0/squircle.min.js');
+    })();
+  }, []);
 
   return (
     <main
