@@ -65,12 +65,14 @@ export const WelcomeCard = () => {
           </button>
         </Link>
       </div>
-      <div className={homeStyle.appGrid}>
-        {apps.map(app => (
-          <HoverWrap borderRadius={25} height={size} width={size} key={app} scale={10}>
-            <Image src={`/${app}.svg`} fill alt="App logo" quality={100} />
-          </HoverWrap>
-        ))}
+      <div className={homeStyle.appsWrap}>
+        <div className={homeStyle.appGrid}>
+          {apps.map(app => (
+            <HoverWrap borderRadius={25} height={size} width={size} key={app} scale={10}>
+              <Image src={`/${app}.svg`} fill alt="App logo" quality={100} />
+            </HoverWrap>
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -116,12 +116,21 @@ const appGrid = style({
   marginTop: '12px',
   '@media': {
     'screen and (max-width: 825px)': {
-      gridRowStart: 1,
       gridTemplateRows: 'auto',
       marginTop: '0',
     },
     'screen and (max-width: 359px)': {
       gridTemplateColumns: 'repeat(3, 56px)',
+    },
+  },
+});
+const appsWrap = style({
+  '@media': {
+    'screen and (max-width: 825px)': {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      gridRowStart: 1,
     },
   },
 });
@@ -255,4 +264,5 @@ export const homeStyle = {
   rotation,
   hideImg,
   contentGridRows,
+  appsWrap,
 };
