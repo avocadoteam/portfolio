@@ -9,7 +9,7 @@ class MyDocument extends Document {
           <Script id="squircle" strategy="beforeInteractive">{`
             if ("paintWorklet" in CSS) {
               CSS.paintWorklet.addModule(
-                'https://www.unpkg.com/css-houdini-squircle@0.2.0/squircle.min.js'
+                'https://www.unpkg.com/css-houdini-squircle/squircle.min.js'
               );
             }
           `}</Script>
