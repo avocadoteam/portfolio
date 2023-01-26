@@ -22,7 +22,7 @@ const apps = [
   'friendship',
   'stuff',
   'city',
-  'med_card',
+  'draw',
   'hinter',
   'purify',
   'clicker',
