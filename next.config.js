@@ -10,6 +10,15 @@ const nextConfig = {
     optimizeCss: true,
     esmExternals: true
   },
+  async redirects() {
+    return [
+      {
+        source: '/discord',
+        destination: 'https://discord.gg/MCfPwMKYfs',
+        permanent: true,
+      },
+    ]
+  }
 };
 
 module.exports = withVanillaExtract(nextConfig);
