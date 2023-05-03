@@ -52,7 +52,7 @@ export const WelcomeCard = () => {
           <ChevronRight />
         </Link>
 
-        <Link href="https://vk.com/avocadoteam" target="_blank" className={linkInsertion}>
+        <Link href="https://vk.com/avocado" target="_blank" className={linkInsertion}>
           <button className={btn({ variant: 'primary', m: 't34' })}>
             <VKLogo className={mr12} />
             Сообщество ВКонтакте
