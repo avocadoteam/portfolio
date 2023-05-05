@@ -1,4 +1,4 @@
-import { Inter, Manrope } from '@next/font/google';
+import { Inter, Manrope } from 'next/font/google';
 
 export const mnrp = Manrope({ weight: ['700'], subsets: ['cyrillic'] });
 export const intr = Inter({

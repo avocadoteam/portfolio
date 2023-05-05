@@ -66,6 +66,7 @@ export const vars = { ...root, colors: colorsContract };
 
 globalStyle('main', {
   backgroundColor: vars.colors.bg,
+  minHeight: '100vh',
 });
 
 export const textBlue = style({
