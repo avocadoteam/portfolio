@@ -4,6 +4,9 @@ dependencies:
   '@nanostores/react':
     specifier: 0.5.0
     version: 0.5.0(nanostores@0.8.1)(react@18.2.0)
+  '@react-spring/web':
+    specifier: 9.7.1
+    version: 9.7.1(react-dom@18.2.0)(react@18.2.0)
   '@sensearena/ui':
     specifier: 0.2.47
     version: 0.2.47(@react-spring/web@9.7.1)(@vanilla-extract/css@1.11.0)(@vanilla-extract/recipes@0.4.0)(react-dom@18.2.0)(react@18.2.0)

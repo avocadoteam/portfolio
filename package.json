@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@nanostores/react": "0.5.0",
+    "@react-spring/web": "9.7.1",
     "@sensearena/ui": "0.2.47",
     "@vanilla-extract/css": "1.11.0",
     "@vanilla-extract/recipes": "0.4.0",
