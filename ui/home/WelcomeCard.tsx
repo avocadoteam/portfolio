@@ -58,7 +58,7 @@ export const WelcomeCard = () => {
             Сообщество ВКонтакте
           </button>
         </Link>
-        <Link href="mailto:avocado@vk.mail" target="_blank" className={linkInsertion}>
+        <Link href="mailto:work@avocado.st" target="_blank" className={linkInsertion}>
           <button className={btn({ variant: 'secondary', m: 't12' })}>
             <MailIcon className={mr9} />
             Связаться

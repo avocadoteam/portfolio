@@ -20,10 +20,10 @@ export const WorkCard = () => {
             Спустя годы работы над собственными идеями, мы выходим на рынок и готовы воплотить ваши.
           </p>
           <p className={tp({ variant: 'shadow', m: 't1' })}>Наша студия открыта к любым предложениям.</p>
-          <Link href="mailto:avocado@vk.mail" target="_blank" className={linkInsertion}>
+          <Link href="mailto:work@avocado.st" target="_blank" className={linkInsertion}>
             <button className={btn({ variant: 'secondary', m: 't20' })}>
               <MailIcon className={mr9} />
-              avocado@vk.mail
+              work@avocado.st
             </button>
           </Link>
         </div>
