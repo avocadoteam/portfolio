@@ -143,7 +143,6 @@ const baseLabel: ComplexStyleRule = {
   lineHeight: '15px',
   letterSpacing: '0.02em',
   textTransform: 'uppercase',
-  width: '30px',
   textAlign: 'center',
 };
 
