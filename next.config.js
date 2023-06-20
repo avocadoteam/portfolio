@@ -8,7 +8,8 @@ const nextConfig = {
   reactStrictMode: true,
   experimental: {
     optimizeCss: true,
-    esmExternals: true
+    esmExternals: true,
+    appDir: false,
   },
   async redirects() {
     return [
