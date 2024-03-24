@@ -41,6 +41,10 @@ export const tp = recipe({
         fontSize: '16px',
         color: vars.colors.text.dark,
       },
+      body: {
+        fontSize: '1rem',
+        color: vars.colors.text.head,
+      },
     },
     m: {
       'x.5': {
